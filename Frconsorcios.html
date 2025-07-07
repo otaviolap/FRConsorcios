@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fr Consórcios</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evita rolagem horizontal */
+            background-color: #07295d;
+        }
+
+        .hero {
+    position: relative;
+    display: flex; /* Usar flexbox para layout */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Alinha verticalmente */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    padding: 120px; /* Ajuste o padding para dar mais espaço */
+    margin-top: -500px;
+    height: 898px;
+    overflow: hidden; /* Para garantir que o pseudo-elemento não saia dos limites */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(imagens-landpageFR/fundo.png);
+    background-position: top center; /* Alinha a imagem ao topo */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+        .form-container {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+    background-image: url(imagens-landpageFR/celular.png);
+    background-size: 800px; /* Faz com que a imagem cubra todo o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 326px; /* Ajuste a largura do formulário */
+    margin-left: 20px; /* Margem à esquerda */
+    height: 595px;
+    font-family: monospace;
+    background-color: transparent;
+    margin-top: 580px;
+    margin-bottom: 100px;
+    background-size: cover;
+}
+
+.tabelaformulario {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+    flex-direction: column; /* Alinha os itens em coluna */
+    width: 80%; /* Ajuste a largura para ocupar todo o contêiner */
+    height: 100%; /* Ajuste a altura para ocupar todo o contêiner */
+    background-size: 800px; /* Faz com que a imagem cubra todo o contêiner */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 0px; /* Ajuste o raio para um visual mais suave */
+    background-color: transparent;
+    font-family: sans-serif;
+}
+.tabelaformulario input,
+.tabelaformulario textarea,
+.tabelaformulario select {
+    border-radius: 10px; /* Ajuste o valor conforme necessário */
+    padding: 10px; /* Adicione padding para um visual mais espaçoso */
+    border: 1px solid #ccc; /* Adicione uma borda para melhor visualização */
+}
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        h2 {
+            color: #ffffff; /* Cor do texto */
+            font-size: 80px;
+            margin: 0; /* Remove margens para melhor alinhamento */
+            background-color: transparent;
+            width: 700px;
+            float: left;
+            margin-top: 500px; /* Ajuste o valor conforme necessário */
+            margin-left: -50px;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona borda ao redor das letras */        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona borda ao redor das letras */
+        }
+
+        .subtitulo {
+            display: block; /* Faz o span se comportar como um bloco */
+            font-size: 30px; /* Tamanho da fonte do subtítulo */
+            color: #ffffff; /* Cor do subtítulo */
+            margin-bottom: 30px;
+            margin-top: 100px; /* Margem superior para espaçamento */
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona borda ao redor das letras */
+        }
+
+        label {
+            display: block; /* Faz o label ocupar toda a largura */
+            margin: 10px 0 5px; /* Margem para espaçamento */
+            font-weight: bold; /* Negrito para os labels */
+            font-size: 1rem; /* Tamanho da fonte padrão */
+            color: #ffffff; /* Cor do texto para melhor legibilidade */
+            line-height: 0.5; /* Aumenta o espaçamento entre linhas */
+            text-transform: uppercase; /* Transforma o texto em maiúsculas (opcional) */
+            letter-spacing: 0.5px; /* Espaçamento entre letras (opcional) */
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Adiciona borda ao redor das letras */
+        }
+
+        .videos {
+            background-color: #07295d;
+            color: rgb(0, 0, 0); /* Cor do texto */
+            text-align: center;
+            padding: 70px;
+            background-position: center /* Centraliza a imagem */
+            background-repeat no-repeat; /* Evita repetição da imagem */
+            z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+            margin-bottom: 100px;
+        }
+
+        .videosRecebidos {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 530px;
+    background-color: #03193b;
+    background-size: 2100px;
+    width: 100%; /* Faz a seção cobrir toda a largura da página */
+    bottom: 0; /* Posiciona a seção na parte inferior */
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os vídeos */
+    gap: 20px; /* Espaçamento entre os vídeos */
+    
+}
+
+.video-square {
+    width: 30%; /* Cada vídeo ocupa 30% da largura do contêiner */
+    height: 200px; /* Altura fixa para os vídeos */
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-square video {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+    font-style: italic;
+    font-size: 50px;
+}
+
+.video-square:hover {
+    background-color: #444; /* Cor de fundo ao passar o mouse */
+}
+
+        .vendedoresbio{
+             background-color: #03193b;
+            color: white; /* Cor do texto */
+            text-align: center;
+            padding: 40px 20px;
+            width: 100%;
+            height: 670px;
+        }
+        .footer {
+    background-color: #000000; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    padding: 5px 5px;
+    margin-top: 0; /* Remove a margem superior */
+    width: 100%; /* Faz a footer cobrir toda a largura da página */
+    
+    bottom: 0; /* Posiciona a footer na parte inferior */
+}
+
+.footer h6 {
+    font-size: 20px; /* Ajuste o tamanho da fonte */
+    padding: 5px; /* Ajuste o padding */
+    margin: 0; /* Remove margens adicionais */
+    margin-left: 5px; /* Remove margem à esquerda */
+    margin-top: 30px;
+}
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff9800; /* Cor do botão */
+            color: white; /* Cor do texto do botão */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #e68a00; /* Cor do botão ao passar o mouse */
+        }
+
+        .enviar {
+         background-color: #ff7700;
+          border-radius: 50%; /* Ajuste para tornar o botão um círculo */
+         width: 55px; /* Largura igual à altura */
+         height: 55px; /* Altura igual à largura */
+         color: white;
+         margin-top: 10px;
+         text-align: center;
+          border-color: white;
+         margin-top: 20px;
+        }
+        .enviar:hover{
+            background-color:#03193b;
+        }
+        .valor{
+            text-align: center;
+        }
+        .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      height: 500px;
+      color: #ffffff;
+      border-radius: 50px;
+      border: 1px solid white;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background-color: #ffffff;
+    }
+
+    .swiper-pagination{
+        background-color: transparent;
+        margin-top: 500px;
+    } 
+    .swiper-pagination-bullet{
+        background-color: white;
+        width: 20px;
+        height: 20px;
+    }
+    .btnsaibamais {
+    border-radius: 50px;
+    background-color: #ff7700;
+    color: white;
+    width: 280px;
+    height: 50px;
+    border-color: #ff7700;
+    font-size: 2.0rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: lighter;
+}
+.btnsaibamais:hover{
+  background-color: #e68a00;
+}
+.saibamais{
+    background-color: #ff6600;
+            color: rgb(0, 0, 0); /* Cor do texto */
+            text-align: center;
+            padding: 70px;
+            background-position: center /* Centraliza a imagem */
+            background-repeat no-repeat; /* Evita repetição da imagem */
+            z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+            background-size: cover;
+            background-repeat: no-repeat; /* Evita repetição da imagem */
+            margin-top: -80px;
+
+}
+h7{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family:fantasy;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    width: 1000px;
+    border: 1px solid #ccc;
+    border-radius: 20% 20% 5% 5%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: left; /* Alinha o texto à esquerda */
+    height: 800px;
+    width: 2500px;
+    background-color: #03193b;
+}
+
+.card-content h4 {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    text-align: left; /* Alinha o h4 à esquerda */
+    white-space: pre-wrap; /* Permite quebras de linha */
+    width: 500px;
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+    color: white;
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    line-height: 1.3; /* Adiciona espaço entre as linhas */
+}
+
+.left-content{
+    flex: 1;
+    padding: 10px;
+}
+.right-content {
+    flex: 1;
+    padding: 1px;
+}
+
+.left-content h4 {
+    margin: 10px 0;
+    font-family: Arial, sans-serif;
+    text-align: left; /* Alinha o h4 à esquerda */
+    white-space: pre-wrap; /* Permite quebras de linha */
+    width: 500px;
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 25px;
+    color: white;
+}
+
+.left-content p{
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: left; /* Alinha o p à esquerda */
+    white-space: pre-wrap; /* Permite quebras de linha */
+    margin-left: 50px; /* Espaço entre o h4 e o p */
+    margin-right: 50px;
+    margin-top: 200px;
+    font-size: 20px;
+}
+.right-content p {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    text-align: left; /* Alinha o p à esquerda */
+    white-space: pre-wrap; /* Permite quebras de linha */
+    margin-left: 20px; /* Espaço entre o h4 e o p */
+    margin-right: 0px;
+    margin-top: 190px;
+    font-size: 20px;
+    height: 50px;
+}
+.moeda{
+  margin-top: 230px;
+  margin-left: 200px;
+}
+.vendedoresbio {
+    color: white; /* Cor do texto */
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    height: 670px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-size: 2150px;
+  }
+
+  .vendedor-container {
+    padding: 20px;
+    border-radius: 50% 10% 50% 0%;
+    text-align: center;
+    height: 550px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha os contêineres à esquerda */
+    align-items: center;
+    margin-top: -100px;
+        background: linear-gradient(to right, #03193b, #e68a00);
+    margin-right: 45px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: flex-start; /* Alinha os contêineres à esquerda */
+    width: 100%;
+  }
+
+  .carousel-container{
+    padding: 10px;
+    margin-left: 50px;
+    
+  }
+  .myCarousel img {
+    border: 15px solid white; /* Adiciona uma borda preta de 5px */
+    border-radius: 50px; /* Adiciona cantos arredondados */
+  }
+
+  .bio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 100px;
+  }
+
+
+  .bio-container p {
+    text-align: left; /* Alinha o texto à esquerda */
+    color: white;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Borda preta */
+    margin-left: 50px;
+    font-size: 20px;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px; /* Empurra os ícones para a direita */
+    margin-right: 5px;
+}
+.social-icons .social-icon {
+    margin-bottom: -10px;
+  }
+
+  .social-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .social-icon:hover {
+    color: #ccc;
+  }
+
+  .myCarousel {
+    width: 300px;
+    height: 300px;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margens */
+    margin-top: 20px;
+  }
+
+  h5 {
+    color: white;
+    font-size: 50px;
+    margin: 20px 0; /* Ajusta a margem superior e inferior */
+    white-space: nowrap; /* Impede a quebra de linha */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .myCarousel .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-button-next::after{
+    color: white;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Borda preta */
+  }
+  .swiper-button-prev::after{
+    color: white;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; /* Borda preta */
+
+  }
+
+  h6 {
+    font-size: 30px; /* Diminuído de 30px para 20px */
+    padding: 5px; /* Diminuído de 10px para 5px */
+    margin: 0; /* Remove margens adicionais */
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-right: 500px;
+}
+.contato {
+    margin: 0; /* Remove margens */
+    color: white;
+    width: auto; /* Ajusta a largura automaticamente */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-left: 10px;
+}
+
+.telefonerodape{
+    color: #e68a00;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-left: 0; /* Remove margem à esquerda */
+}
+.emailrodape{
+  color: #e68a00;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-left: 5px; /* Remove margem à esquerda */
+}
+.endereçorodape{
+  color: #e68a00;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-left: 25px; /* Remove margem à esquerda */
+}
+
+.btn_social {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #000000;
+    margin-right: 0px;
+    margin-top: 20px;
+}
+.btn_social ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+.btn_social ul li {
+    position: relative;
+    background: #ff6600;
+    margin: 5px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 3px;
+    font-size: 1.5em;
+    text-align: center;
+}
+.btn_social ul li a {
+    width: 50px;
+    height: 50px;
+    line-height: 53px;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: .4s;
+}
+.btn_social ul li::before {
+    transition: 0.4s;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 90%;
+    left: 0;
+    background: #ffffff;
+    z-index: -1;
+    transform: scale(1);
+    transition: .4s;
+}
+.btn_social ul li:hover::before {
+    transition: 0.4s;
+    top: 0%;
+}
+.btn_social ul li a:hover {
+    color: #03193b;
+}
+
+.btn_social ul li a[href*="wa.me"]:hover {
+    color: #25D366; /* Cor verde do WhatsApp */
+}
+.btn_social ul li a[href*="instagram.com"]:hover {
+    color: #E1306C; /* Cor do Instagram */
+}
+.btn_social ul li a[href*="facebook.com"]:hover {
+    color: #3b5998; /* Cor do Facebook */
+}
+
+.btn_social ul li a[href*="linkedin.com"]:hover {
+    color: #0077b5; /* Cor do LinkedIn */
+}
+
+.btn_social ul li a[href*="youtube.com"]:hover {
+    color: #FF0000; /* Cor do YouTube */
+}
+.btn_social ul li:hover::before { transition:0.4s; top:0%; }
+.btn_social ul li a:hover       { color:#03193b; }
+
+
+
+
+
+
+
+
+
+
+
+
+.social-icon.instagram:hover i {
+    background: linear-gradient(45deg, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+    border-radius: 100%; /* Adiciona borda arredondada */
+}
+
+.social-icon.whatsapp:hover i {
+    background: #25D366;
+    color: white;
+    border-radius: 100%; /* Adiciona borda arredondada */
+}
+    
+  
+    </style>
+</head>
+<body>
+    <!-- Seção de Atração -->
+    <header class="hero">
+        <div> 
+          <h2> 
+            <img src="imagens-landpageFR/LOFOFRCONSORCIOS.png" alt="" style="margin-left: 50px;">
+            <br>
+            Faça seu cadastro!
+            <span class="subtitulo">Venha conhecer nossa empresa e os benefícios ofertados.</span>
+        </h2>
+            <a href="#objetivos">
+            <button class="btnsaibamais">Clique Aqui</button>
+            </a>
+          </div>
+        <div class="form-container">
+            <form class="tabelaformulario">
+                <h1>Formulário</h1>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+        
+                
+                <label for="valor">Pretendo Investir:</label>
+                <input type="text" id="valor" name="valor" oninput="formatCurrency(this)">
+                <script>
+                function formatCurrency(input) {
+                let value = input.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+                value = (value / 100).toFixed(2); // Converte para formato de moeda
+                input.value = 'R$ ' + value.replace('.', ','); // Adiciona o prefixo "R$" e substitui ponto por vírgula
+                }
+                </script>
+        
+                <button class="enviar" type="submit">Enviar</button>
+
+                <p style="font-size: smaller;">*Preencha o formulário para que um de nossos consultores entre em contato*</p>
+            </form>
+        </div>
+    </header>
+
+    <!-- Seção de Informações -->
+    <section id="videos" class="videos">
+        <h1>Por que Se juntar a Família FR-Consórcios?</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://youtube.com/embed/7kij50gmxh8?si=87qwdr6owLhCUgWi" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/A5KlNjeZDZM?si=dQ0Eygtzqe6fzb2e" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe width="560" height="500" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen style="border-radius: 50px;"></iframe>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+    </section>
+
+    <section id="saibamais" class="saibamais">
+      <div style="text-align: center; width: 100%; margin-bottom: 20px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+          <h7 id="objetivos">Saiba mais sobre a <br>nossa empresa</h7>
+      </div>
+      <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <div class="left-content">
+              <h4>Os objetivos que <br>sabemos que você <br>quer alcançar</h4>
+              <p>Juntos por um futuro melhor. É um convite à união e à colaboração. <br>Em um mundo cada vez mais desafiador, é essencial que nos unamos em prol de causas que beneficiem a todos. <br>Só através da solidariedade, do respeito e da empatia podemos construir um futuro mais justo, sustentável e cheio de oportunidades para as próximas gerações. <br>Cada pequeno gesto conta, e, quando somados, podem transformar a realidade de forma significativa. Juntos, somos mais fortes!</p>
+              </div>
+            <div class="right-content">
+              <p>Descreva os objetivos que você sabe que prospectado<br>pretende alcançar. Adicione detalhes para ilustrar uma imagem clara. <br>Sua explicação deve enfatizar o significado da sua solução<br>proposta, ilustrando como ela atuará efetivamente sobre os<br>problemas conhecidos.<br> <br>Ao fornecer uma visão geral detalhada, você demonstrará a<br>necessidade de agir e o possível<br>impacto da solução proposta.</p>
+              <img class="moeda" src="imagens-landpageFR/moeda.png" alt="">
+            </div>
+
+          </div>
+          </div>
+      </div>
+  </section>
+  </section>
+
+  <section id="vendedoresbio" class="vendedoresbio">
+    <div class="vendedor-container">
+      <h5>Conheça nossos consultores</h5>
+      <div class="content">
+        <div class="carousel-container">
+          <div class="myCarousel swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="imagens-landpageFR/marcio.jpeg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="imagens-landpageFR/caio.jpeg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="imagens-landpageFR/dara.jpeg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="imagens-landpageFR/conrado.jpeg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="imagens-landpageFR/milene.jpeg" />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="bio-container">
+  <p id="bio-text"><script>
+    document.getElementById('bio-text').innerHTML = '<strong> Márcio Lima - Gerente de Vendas </strong> <p> Olá, sou o Márcio Lima, com 6 anos de experiência no mercado de consórcios, sendo 3 deles na FR Consórcios. <p> Aqui, ajudo meus clientes a realizarem seus sonhos de forma segura e planejada. <p>  Se você busca investir em imóveis ou veículos sem juros altos, estou à disposição para te ajudar a escolher a melhor opção. <p> Vamos juntos conquistar seus objetivos!.';
+  </script>
+  <div id="social-icons" class="social-icons">
+    <a href="https://www.instagram.com/jmarcinho_lima/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/554384852447" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".myCarousel", {
+      effect: "flip",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        slideChange: function () {
+          const bios = [
+            {
+              text: '<strong> Márcio Lima - Gerente de Vendas </strong> <p> Olá, sou o Márcio Lima, com 6 anos de experiência no mercado de consórcios, sendo 3 deles na FR Consórcios. <p> Aqui, ajudo meus clientes a realizarem seus sonhos de forma segura e planejada. <p>  Se você busca investir em imóveis ou veículos sem juros altos, estou à disposição para te ajudar a escolher a melhor opção. <p> Vamos juntos conquistar seus objetivos!.',
+              icons: `
+                <a href="https://www.instagram.com/jmarcinho_lima/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/554384852447" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              `
+            },
+            {
+              text: '<strong> Caio Ferreira - Especialista em Investimento e Consórcio Automotivos </strong> <p> Vendedor com 7 anos de experiência no mercado de consórcios e investimentos. <p> Sempre fui fiel a uma única empresa, onde me destaquei por superar metas e atingir resultados consistentes. <p> Sou reconhecido como um ótimo vendedor mantendo números excelentes, e isso reflete meu compromisso em oferecer soluções personalizadas aos meus clientes. <p> Minha dedicação e experiência me tornaram uma referência no setor.',
+              icons: `
+                <a href="https://www.instagram.com/caio.frconsorcios/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/554396933304" class="social-icon instagram whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              `
+            },
+            {
+              text: '<strong> Dara Regina - Especialista em Investimento e Consórcio </strong> <p>Olá, sou Dara! Com 4 anos de experiência no mercado de consórcios, sou especialista em imóveis e investimentos, trabalhando com as melhores administradoras. <p> Minha missão é oferecer estratégias financeiras personalizadas, alinhadas aos seus objetivos, com integridade e compromisso. <p> Se você busca um acompanhamento que compreenda suas aspirações e ajude a construir um futuro sólido, estou aqui para caminhar com você em cada etapa da sua jornada financeira!',
+              icons: `
+                <a href="https://www.instagram.com/dara_regina17/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/554391564994" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              `
+            },
+            {
+              text: '<strong> Conrado Oliveira – Especialista em Consórcios </strong> <p> Com menos de dois anos no mercado, já conquistei mais de R$ 14 milhões em vendas e uma taxa de 97% de assertividade nas contemplações. <p> Meu compromisso é oferecer soluções personalizadas, com total transparência e foco em realizar seus sonhos com segurança e planejamento. <p> Se você busca um atendimento dedicado e confiável, estou à disposição para ajudá-lo a conquistar seus objetivos.',
+              icons: `
+                <a href="https://www.instagram.com/con.oliveeira/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/5543991052243" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              `
+            },
+            {
+              text: '<strong> Milene Pereira – Especialista em Consórcios e Vendas </strong> <p> Atuo na área de vendas há mais de 15 anos. Tenho facilidade em me comunicar e encontrei na área de vendas uma forma de ajudar as pessoas a realizarem seus sonhos. <p> Desde então, busco oferecer soluções que atendam às necessidades dos meus clientes, com transparência e confiança. <p> Meu diferencial é a capacidade de criar uma relação de parceria e garantir que cada cliente se sinta seguro com suas escolhas. Acredito que o sucesso está em trabalhar com honestidade e comprometimento. Estou sempre pronta para ajudar as pessoas alcançarem seus objetivos.',
+              icons: `
+                <a href="https://www.instagram.com/milenepereirasilva/" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/5543988148887" class="social-icon whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              `
+            }
+          ];
+
+          const bio = bios[this.activeIndex];
+          document.getElementById('bio-text').innerHTML = bio.text;
+          document.getElementById('social-icons').innerHTML = bio.icons;
+        }
+      }
+    });
+  </script>
+  </section>
+  <script>
+    var swiper = new Swiper(".myCarousel", {
+      effect: "flip",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  
+
+</section>
+
+      <section id="videosRecebidos" class="videosRecebidos">
+        <!-- Contêiner do título centralizado -->
+        <div style="text-align: center; width: 100%; margin-top: -120px;">
+          <h3>Depoimentos</h3>
+        </div>
+      
+        <!-- Contêiner dos vídeos com flexbox -->
+        <div class="videos-container">
+          <div class="video-square">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-square">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-square">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-square">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-square">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="video-square">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID_6" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    <!-- Seção de Conversão -->
+  
+    <footer class="footer">
+      <h6>Entre em contato:</h6>
+      <p class="contato">
+        <span class="telefonerodape">Telefone:</span>
+        <span style="margin-right: 20px;">(43) 99156 - 4994</span>
+        <span class="emailrodape">E-mail:</span>
+        <span>comercial@frconsorcios.com</span>
+        <span class="endereçorodape">Endereço: </span>
+        <span style="margin-right: 20px;">Rua Rubens Carlos de Jesus, 355. Terras de Santana II (LONDRINA-PR)</span>
+    </p>
+    <div class="btn_social">
+        <ul class="btn_social">
+            <li><a href="https://www.facebook.com/profile.php?id=61550611179998&locale=pt_BR" target="_blank" title="facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/fr_consorcios/" target="_blank" title="instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCTc5Y79V4Nf66IHZF-ggW9Q" target="_blank" title="youtube"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://wa.me/554391564994" target="_blank" title="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/fr-cons%C3%B3rcios-ltda/posts/?feedView=all" target="_blank" title="linkdin"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+  </footer>
+</body>
+</html>
